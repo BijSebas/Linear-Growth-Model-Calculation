@@ -1,0 +1,36 @@
+def linear():
+    
+    #This piece helps the student define what information can be found where.
+    print("Coördinates are always displayed (x , y)")
+    
+    
+    #This part asks the user to input information of 2 (x , y) coordinates.
+    x1 = int(input('\nx first coördinate?  '))
+    y1 = int(input('y first coördinate?  '))
+    
+    x2 = int(input('x second coördinate? '))
+    y2 = int(input('y second coördinate? '))
+    
+    
+    #This part determines which coordinate is left and which coordinate is right.
+    if x1 < x2:
+        xl = x1
+        yl = y1
+        xr = x2
+        yr = y2
+    else:
+        xr = x1
+        yr = y1
+        xl = x2
+        yl = y2
+    
+    #This part calculates the slope of the linear model.
+    a = (yr - yl)/(xr - xl)
+    
+    #This part calculates the constant of the linear model.
+    b = -a*xl + yl
+    
+    #The last part prints the model, the left and right coordinate and the y-intercept of the linear model.
+    print('\ny = {}x + {} \n\nLeft coördinate:  ({} , {}) \nRight coördinate: ({} , {})'.format(a,b,xl,yl,xr,yr))
+
+    print('\ny-intercept (start point): (0 , {})'.format(b))
